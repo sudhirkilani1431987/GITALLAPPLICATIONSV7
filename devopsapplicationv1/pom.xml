@@ -32,6 +32,10 @@
              <muleVersion>${mule.tools.version}</muleVersion>
              <username>nshaik@786</username>
              <password>Skzakeer@786</password>
+             <applicationName>devopsapplicationv1-maven-1.0</applicationName>
+             <target>CloudHub</target>
+             <domain>${cloudhub.domain}</domain>
+             <targetType>server</targetType>
              <workerType>Micro</workerType>
              <redeploy>true</redeploy>
              <!--  <applicationName>myapplication-maven-1.0</applicationName> -->
