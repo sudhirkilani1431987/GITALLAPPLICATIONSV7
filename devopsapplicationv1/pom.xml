@@ -30,8 +30,8 @@
          <configuration>
              <deploymentType>cloudhub</deploymentType>
              <muleVersion>${mule.tools.version}</muleVersion>
-             <username>sudhirkilani</username>
-             <password>Anypoint@123</password>
+             <username>nshaik@786</username>
+             <password>Skzakeer@786</password>
              <workerType>Micro</workerType>
              <redeploy>true</redeploy>
              <!--  <applicationName>myapplication-maven-1.0</applicationName> -->
@@ -40,7 +40,7 @@
              <!-- One of: server, serverGroup, cluster -->
             
              
-             <environment>PRODUCTION</environment>
+             <environment>SANDBOX</environment>
          </configuration>
          <executions>
              <execution>
