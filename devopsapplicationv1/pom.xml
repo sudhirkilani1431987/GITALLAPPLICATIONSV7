@@ -82,7 +82,7 @@
     <configuration>
      <deploymentType>cloudhub</deploymentType>
      <muleVersion>3.8.1</muleVersion>
-     <username>sudhirkilani</username>
+     <username>sudhirkilani1</username>
      <password>Anypoint@123</password>
      <applicationName>devopsapplicationv1</applicationName>
      <redeploy>true</redeploy>
