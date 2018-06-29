@@ -18,106 +18,92 @@
 	</properties>
 
 	<build>
-  <plugins>
-   <plugin>
-    <groupId>org.mule.tools.maven</groupId>
-    <artifactId>mule-app-maven-plugin</artifactId>
-    <version>${mule.tools.version}</version>
-    <extensions>true</extensions>
-    <configuration>
-     <copyToAppsDirectory>true</copyToAppsDirectory>
-    </configuration>
-   </plugin>
-   <plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>build-helper-maven-plugin</artifactId>
-    <version>1.7</version>
-    <executions>
-     <execution>
-      <id>add-resource</id>
-      <phase>generate-resources</phase>
-      <goals>
-       <goal>add-resource</goal>
-      </goals>
-      <configuration>
-       <resources>
-        <resource>
-         <directory>src/main/app/</directory>
-        </resource>
-        <resource>
-         <directory>src/main/api/</directory>
-        </resource>
-        <resource>
-         <directory>mappings/</directory>
-        </resource>
-       </resources>
-      </configuration>
-     </execution>
-    </executions>
-   </plugin>
-
-   <!-- <plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>properties-maven-plugin</artifactId>
-    <version>1.0.0</version>
-    <executions>
-     <execution>
-      <phase>initialize</phase>
-      <goals>
-       <goal>read-project-properties</goal>
-      </goals>
-      <configuration>
-       <files>
-        <file>src/main/resources/init.properties</file>
-       </files>
-      </configuration>
-     </execution>
-    </executions>
-   </plugin> -->
-   <!-- Deploy to Cloudhub -->
-   <plugin>
-    <groupId>org.mule.tools.maven</groupId>
-    <artifactId>mule-maven-plugin</artifactId>
-    <version>2.0</version>
-    <configuration>
-     <deploymentType>cloudhub</deploymentType>
-     <muleVersion>3.8.1</muleVersion>
-     <username>sudhirkilani1</username>
-     <password>Anypoint@123</password>
-     <applicationName>devopsapplicationv1</applicationName>
-     <redeploy>true</redeploy>
-     <environment>Sandbox</environment>
-     <!-- <uri>https://anypoint.mulesoft.com</uri> -->
-     <workerType>Micro</workerType>
-    </configuration>
-    <executions>
-     <execution>
-      <id>deploy</id>
-      <phase>deploy</phase>
-      <goals>
-       <goal>deploy</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
-   <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-deploy-plugin</artifactId>
-    <configuration>
-     <skip>true</skip>
-    </configuration>
-   </plugin>
-  <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-
-  </plugins>
- </build>
+		<plugins>
+		
+		
+		<plugin>
+       <groupId>org.mule.tools.maven</groupId>
+       <artifactId>mule-maven-plugin</artifactId>
+       <version>2.0</version>
+       <!-- <configuration>
+             <deploymentType>standalone</deploymentType>
+             <muleVersion>${mule.version}</muleVersion>
+         </configuration> -->
+         <configuration>
+             <deploymentType>cloudhub</deploymentType>
+             <muleVersion>3.8.1</muleVersion>
+             <username>sudhirkilani1</username>
+             <password>Anypoint@123</password>
+             <applicationName>devopsapplicationv1</applicationName>
+             
+             
+             
+             <workerType>Micro</workerType>
+             <redeploy>true</redeploy>
+             <!--  <applicationName>myapplication-maven-1.0</applicationName> -->
+              <!-- <businessGroup>engineering\devops</businessGroup> -->
+             
+             <!-- One of: server, serverGroup, cluster -->
+            
+             
+             <environment>Sandbox</environment>
+         </configuration>
+         <executions>
+             <execution>
+                 
+                 
+                 <goals>
+                     <goal>deploy</goal>
+                 </goals>
+             </execution>
+         </executions>
+     </plugin>
+     <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-deploy-plugin</artifactId>
+  <configuration>
+    <skip>true</skip>
+  </configuration>
+</plugin>
+     
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-app-maven-plugin</artifactId>
+				<version>${mule.tools.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+                    <copyToAppsDirectory>true</copyToAppsDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/app/</directory>
+								</resource>
+								<resource>
+									<directory>src/main/api/</directory>
+								</resource>
+								<resource>
+									<directory>mappings/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 	<!-- Mule Dependencies -->
 	<dependencies>
@@ -205,16 +191,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-	<distributionManagement>
-	<repository>
-            <uniqueVersion>false</uniqueVersion>
-          <id>mycloudhub</id>
-          <name>Cloud Hub</name>
-          <url>https://anypoint.mulesoft.com/cloudhub/</url>
-          <layout>default</layout>
-        </repository>
 	
-	</distributionManagement>
 
 	<repositories>
           <repository>
