@@ -26,9 +26,9 @@
             <configuration>
           <deploymentType>cloudhub</deploymentType>
           <muleVersion>${mule.tools.version}</muleVersion>
-          <username>XXXX</username>
-          <password>XXXX</password>
-          <applicationName>devopsapplicationv1-maven-1.0</applicationName>
+          <username>sudhirkilani1</username>
+          <password>Anypoint@123</password>
+          <applicationName>devopsapplicationv1</applicationName>
           <target>CloudHub</target>
           <domain>${cloudhub.domain}</domain>
           <targetType>server</targetType>
