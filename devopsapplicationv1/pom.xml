@@ -14,6 +14,7 @@
 
 		<mule.version>3.8.5</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
+    	<cloudhub.domain>mydomain</cloudhub.domain>
 	</properties>
 
 	<build>
@@ -30,10 +31,11 @@
          <configuration>
              <deploymentType>cloudhub</deploymentType>
              <muleVersion>${mule.tools.version}</muleVersion>
-             <username>nshaik@786</username>
-             <password>Skzakeer@786</password>
-             <applicationName>devopsapplicationv1-maven-1.0</applicationName>
+             <username>sudhirkilani</username>
+             <password>Anypoint@123</password>
+            <!-- <applicationName>devopsapplicationv1-maven-1.0</applicationName> --> 
              <target>CloudHub</target>
+             <targetType>server</targetType>
              <domain>${cloudhub.domain}</domain>
              <targetType>server</targetType>
              <workerType>Micro</workerType>
@@ -186,7 +188,7 @@
             <uniqueVersion>false</uniqueVersion>
           <id>mycloudhub</id>
           <name>Cloud Hub</name>
-          <url>https://anypoint.mulesoft.com/cloudhub/</url>
+          <url>https://anypoint.mulesoft.com/</url>
           <layout>default</layout>
         </repository>
 	
