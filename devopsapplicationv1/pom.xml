@@ -30,7 +30,7 @@
      <password>Anypoint@123</password>
      <applicationName>devopsapplicationv1</applicationName>
      <redeploy>true</redeploy>
-     <environment>Sandbox</environment>
+     <environment>SANDBOX</environment>
      <!-- <uri>https://anypoint.mulesoft.com</uri> -->
      <workerType>Micro</workerType>
     </configuration>
