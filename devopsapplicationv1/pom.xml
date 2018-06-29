@@ -12,7 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<mule.version>3.8.5</mule.version>
+		<mule.version>3.8.1</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
     	<cloudhub.domain>mydomain</cloudhub.domain>
 	</properties>
@@ -46,7 +46,7 @@
              <!-- One of: server, serverGroup, cluster -->
             
              
-             <environment>SANDBOX</environment>
+             <environment>SandBox</environment>
          </configuration>
          <executions>
              <execution>
@@ -94,6 +94,13 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-deploy-plugin</artifactId>
+  <configuration>
+    <skip>true</skip>
+  </configuration>
+</plugin>
 		</plugins>
 	</build>
 
@@ -188,7 +195,7 @@
             <uniqueVersion>false</uniqueVersion>
           <id>mycloudhub</id>
           <name>Cloud Hub</name>
-          <url>https://anypoint.mulesoft.com/</url>
+          <url>https://anypoint.mulesoft.com/cloudhub/</url>
           <layout>default</layout>
         </repository>
 	
